@@ -1,4 +1,4 @@
-import { Track } from '../../src/constants/types';
+import { Track } from '../../src/types';
 
 export const tracks: Track[] = [
 	{

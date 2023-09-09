@@ -1,5 +1,5 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
-import { Track } from '../constants/types';
+import { Track } from '../types';
 import COLORS from '../constants/Colors';
 
 type TrackListItemProps = {
