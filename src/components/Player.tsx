@@ -1,72 +1,73 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { tracks } from '../../assets/data/tracks';
-const track = tracks[0];
+import { usePlayerContext } from '../providers/PlayerProvider';
 
 const Player = () => {
-  if (!track) {
-    return null;
-  }
+	const { track } = usePlayerContext();
 
-  const image = track.album.images?.[0];
+	if (!track) {
+		return null;
+	}
 
-  return (
-    <View style={styles.container}>
-      <View style={styles.player}>
-        {image && <Image source={{ uri: image.url }} style={styles.image} />}
+	const image = track.album.images?.[0];
 
-        <View style={{ flex: 1 }}>
-          <Text style={styles.title}>{track.name}</Text>
-          <Text style={styles.subtitle}>{track.artists[0]?.name}</Text>
-        </View>
+	return (
+		<View style={styles.container}>
+			<View style={styles.player}>
+				{image && <Image source={{ uri: image.url }} style={styles.image} />}
 
-        <Ionicons
-          name={'heart-outline'}
-          size={20}
-          color={'white'}
-          style={{ marginHorizontal: 10 }}
-        />
-        <Ionicons
-          disabled={!track?.preview_url}
-          name={'play'}
-          size={22}
-          color={track?.preview_url ? 'white' : 'gray'}
-        />
-      </View>
-    </View>
-  );
+				<View style={{ flex: 1 }}>
+					<Text style={styles.title}>{track.name}</Text>
+					<Text style={styles.subtitle}>{track.artists[0]?.name}</Text>
+				</View>
+
+				<Ionicons
+					name={'heart-outline'}
+					size={20}
+					color={'white'}
+					style={{ marginHorizontal: 10 }}
+				/>
+				<Ionicons
+					disabled={!track?.preview_url}
+					name={'play'}
+					size={22}
+					color={track?.preview_url ? 'white' : 'gray'}
+				/>
+			</View>
+		</View>
+	);
 };
 
 const styles = StyleSheet.create({
-  container: {
-    position: 'absolute',
-    width: '100%',
-    top: -75,
-    height: 75,
-    padding: 10,
-  },
-  player: {
-    backgroundColor: '#286660',
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderRadius: 5,
-    padding: 3,
-    paddingRight: 15,
-  },
-  title: {
-    color: 'white',
-  },
-  subtitle: {
-    color: 'lightgray',
-    fontSize: 12,
-  },
-  image: {
-    height: '100%',
-    aspectRatio: 1,
-    marginRight: 10,
-    borderRadius: 5,
-  },
+	container: {
+		position: 'absolute',
+		width: '100%',
+		top: -75,
+		height: 75,
+		padding: 10,
+	},
+	player: {
+		backgroundColor: '#286660',
+		flex: 1,
+		flexDirection: 'row',
+		alignItems: 'center',
+		borderRadius: 5,
+		padding: 3,
+		paddingRight: 15,
+	},
+	title: {
+		color: 'white',
+	},
+	subtitle: {
+		color: 'lightgray',
+		fontSize: 12,
+	},
+	image: {
+		height: '100%',
+		aspectRatio: 1,
+		marginRight: 10,
+		borderRadius: 5,
+	},
 });
 
 export default Player;
