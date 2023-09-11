@@ -128,4 +128,6 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default Player;
+export default Player; 
+
+// 159 // timestamp
