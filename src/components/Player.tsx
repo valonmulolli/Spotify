@@ -129,5 +129,3 @@ const styles = StyleSheet.create({
 });
 
 export default Player; 
-
-// 159 // timestamp
