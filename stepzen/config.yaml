@@ -1,5 +1,8 @@
 configurationset:
   - configuration:
+      name: postgresql_config
+      uri: postgresql://ep-white-wave-77015170.eu-central-1.aws.neon.tech/neondb?user=valonm9204&password=K6a5QLCjUWVE
+  - configuration:
       name: auth_config
       client_id: 7b511e6cc966443580def3b35d250381
       client_secret: b0d3fbc3cd5e4d4dba4bf24df9c6917f

@@ -7,7 +7,6 @@ import {
 	View,
 } from 'react-native';
 import TrackListItem from '../../components/TrackListItem';
-import { tracks } from '../../../assets/data/tracks';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FontAwesome } from '@expo/vector-icons';
 import COLORS from '../../constants/Colors';
