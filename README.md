@@ -10,16 +10,6 @@ This project is a full-stack Spotify clone that integrates directly with the Spo
 - View and manage your playlists
 - Explore recommended songs and playlists
 
-## Getting Started
-
-To get started with the project, follow these steps:
-
-1. Clone the repository: `git clone <repository-url>`
-2. Install dependencies for the frontend: `cd frontend && npm install`
-3. Install dependencies for the backend: `cd backend && npm install`
-4. Configure your Spotify API credentials in the backend: `backend/.env`
-5. Start the frontend: `cd frontend && npm start`
-6. Start the backend: `cd backend && npm start`
 
 ## Technologies Used
 
@@ -29,7 +19,3 @@ To get started with the project, follow these steps:
 - GraphQL
 - StepZen
 - Spotify API
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
